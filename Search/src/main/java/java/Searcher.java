@@ -15,6 +15,9 @@ import javax.servlet.http.HttpSession;
  * Created by user on 21.12.2016.
  */
 public class Searcher extends HttpServlet{
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doPost(request, response);
+    }
     @Override
     protected void doPost(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
