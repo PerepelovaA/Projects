@@ -5,8 +5,10 @@
 <body>
 <h2>Hello World from Perepelova</h2>
 <div class = "searcher">
-    <input class="searcherText" type="text" id="searchText">
-    <button value="Search" id="search"><span>Search</span></button>
+    <form action="/base">
+        <input class="searcherText" type="text" id="searchText">
+        <button value="Search" id="search"><span>Search</span></button>
+    </form>
 </div>
 <div class="result">
     <textarea id="result" placeholder="Nothing to search=("><%= session.getAttribute("results")%></textarea>
