@@ -14,6 +14,12 @@ import java.util.List;
 import java.io.File;
 import java.util.regex.Pattern;
 
+import static java.nio.file.Files.readAllBytes;
+
+/** @version 1.0
+        * @since  1.6.0
+        */
+
 public class Library {
     private static Library instance;
     private ArrayList<String> documents;
@@ -37,7 +43,7 @@ public class Library {
                 byte[] encoded = new byte[0];
 
                 try {
-                    encoded = Files.readAllBytes(Paths.get(child.getPath()));
+                    encoded =  readAllBytes(Paths.get(child.getPath()));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -72,8 +78,6 @@ public class Library {
             }
 
         } else {
-
-
 
         }
 
