@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="form-inline" style="text-align: center;">
-    <form action="/searcher" method="GET">
+    <form action="/searcher" method="post">
         <div class="form-group">
             <input id="search" name="search" type="text" class="form-control" style="width: 600px;" />
         </div>

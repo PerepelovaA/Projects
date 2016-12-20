@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
  */
 public class Searcher extends HttpServlet{
     @Override
-    protected void doGet(HttpServletRequest request,
+    protected void doPost(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         response.setStatus(HttpServletResponse.SC_OK);
