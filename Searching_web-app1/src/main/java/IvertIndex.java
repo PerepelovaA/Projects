@@ -26,71 +26,37 @@ public class IvertIndex {
     public String[] getDocNames(String searchText) {
 
         searchText = searchText.toLowerCase();
-
         String[] searchWords = searchText.split(" ");
-
-
-
         HashSet<String> currentDocs = new HashSet<String>(baseBooks.keySet());
-
         for (String word : searchWords) {
-
             if (baseIndex.get(word) != null) {
-
                 currentDocs = intersection(currentDocs, baseIndex.get(word));
-
             } else {
-
                 currentDocs = new HashSet<String>();
-
             }
-
         }
-
         return currentDocs.toArray(new String[currentDocs.size()]);
-
     }
 
 
 
     public String[] getTextInDocs(String searchText, String[] docsName) {
-
         List<String[]> result = new ArrayList<String[]>();
-
         for(String doc : docsName) {
-
             String text = baseBooks.get(doc);
-
             System.out.println(baseIndex.get(searchText));
-
             String[] searchWords = searchText.split(" ");
-
             List<String> elementText = new ArrayList<String>();
-
             for(String word : searchWords)
-
                 try {
-
                     elementText.add(text.substring(prevIndexWord(text, word), nextIndexWord(text, word)));
-
                 } catch (Exception e) {
-
                     System.out.println("prev: " + prevIndexWord(text, word));
-
                     System.out.println("next: " + nextIndexWord(text, word));
-
-                    e.printStackTrace();
-
-                }
-
+                    e.printStackTrace();}
             result.add(elementText.toArray(new String[elementText.size()]));
-
         }
-
         return makeFinalString(result);
-
-
-
     }
 
 

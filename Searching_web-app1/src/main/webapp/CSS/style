@@ -11,9 +11,9 @@
 
   position: absolute;
 
-  width: 700px;
+  width: auto;
 
-  height: 400px;
+  height: 700px;
 
 }
 .searcher{
