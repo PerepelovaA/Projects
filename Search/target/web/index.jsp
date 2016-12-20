@@ -9,10 +9,11 @@
 <div class="form-inline" style="text-align: center;">
     <form action="/searcher" method="GET">
         <div class="form-group">
-            <input id="search" name="search" type="text" placeholder="Text to search" class="form-control" style="width: 600px;" />
+            <input id="search" name="search" type="text" class="form-control" style="width: 600px;" />
         </div>
         <button type="submit" class="btn btn-default">Search</button>
     </form>
 </div>
+<p><%=session.getAttribute("result")%></p>
 </body>
 </html>
