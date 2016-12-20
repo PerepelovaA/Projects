@@ -2,38 +2,22 @@ package java; /**
  * Created by user on 21.12.2016.
  */
 import java.io.IOException;
-
 import java.lang.reflect.Array;
-
+import java.nio.*;
 import java.nio.charset.StandardCharsets;
-
 import java.nio.file.Files;
-
 import java.nio.file.Paths;
-
 import java.util.ArrayList;
-
 import java.util.Arrays;
-
 import java.util.HashMap;
-
 import java.util.List;
-
 import java.io.File;
-
 import java.util.regex.Pattern;
 
-
 public class Library {
-
     private static Library instance;
-
     private ArrayList<String> documents;
-
     private HashMap<String, ArrayList<Integer>> map;
-
-
-
     private Library() {
 
         documents = new ArrayList<String>();
@@ -53,23 +37,14 @@ public class Library {
                 byte[] encoded = new byte[0];
 
                 try {
-
                     encoded = Files.readAllBytes(Paths.get(child.getPath()));
-
                 } catch (IOException e) {
-
                     e.printStackTrace();
-
                 }
-
                 String file = new String(encoded, StandardCharsets.UTF_8);
-
                 documents.add(file);
-
                 Integer curDoc = documents.size() - 1;
-
                 String[] words = file.split("\\P{L}+");
-
                 for(int i = 0; i < words.length; i++) {
 
                     String word = words[i].toLowerCase();
