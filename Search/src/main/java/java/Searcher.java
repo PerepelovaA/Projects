@@ -1,4 +1,5 @@
 package java;
+import java.io.Console;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -24,6 +25,8 @@ public class Searcher extends HttpServlet{
             response.getWriter().println("Enter request");
             return;
         }
+        String search1 = "он сказал";
+        String[] parts1 = search1.split("\\P{L}+");
         String[] parts = search.split("\\P{L}+");
         if (parts.length > 2) {
             response.getWriter().println("just 2 words");
@@ -36,7 +39,8 @@ public class Searcher extends HttpServlet{
         }
         response.getWriter().println(document);
         HttpSession session=request.getSession();
-        session.setAttribute("result",document);
+        session.setAttribute("result",Library.getInstance().getDocument(parts1));
+        System.out.println(Library.getInstance().getDocument(parts1));
     }
 
 }
