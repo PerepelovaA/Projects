@@ -28,7 +28,7 @@ public class SearchingServlet extends HttpServlet {
         boolean ajax = "XMLHttpRequest".equals(request.getHeader("X-Requested-With"));
         String result;
         if (ajax) {
-            String searchText = request.getParameter("text");
+            String searchText = request.getParameter("searchText");
             Writer writer = response.getWriter();
             response.setContentType("text/plain");
             response.setCharacterEncoding("UTF-8");

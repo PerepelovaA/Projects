@@ -5,8 +5,8 @@
 <body>
 <h2>Hello World from Perepelova</h2>
 <div class = "searcher">
-    <form action="/base">
-        <input class="searcherText" type="text" id="searchText">
+    <form action="/base" method="post">
+        <input class="searcherText" type="text" name="searchText">
         <button value="Search" id="search"><span>Search</span></button>
     </form>
 </div>
