@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
+<a></a><p></p>
 <div class="form-inline" style="text-align: center;">
     <form action="/searcher" method="post">
         <div class="form-group">

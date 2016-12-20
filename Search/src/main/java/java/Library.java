@@ -3,7 +3,6 @@ package java; /**
  */
 import java.io.IOException;
 import java.lang.reflect.Array;
-import java.nio.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -15,10 +14,6 @@ import java.io.File;
 import java.util.regex.Pattern;
 
 import static java.nio.file.Files.readAllBytes;
-
-/** @version 1.0
-        * @since  1.6.0
-        */
 
 public class Library {
     private static Library instance;
