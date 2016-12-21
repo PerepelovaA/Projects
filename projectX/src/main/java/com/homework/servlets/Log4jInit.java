@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.*;
 
-/**
- * Created by mikhail on 24.09.16.
- */
 public class Log4jInit extends HttpServlet {
 
     @Override
@@ -36,6 +33,7 @@ public class Log4jInit extends HttpServlet {
         try {
             String pref = getServletContext().getRealPath("/");
             String logfile = (String) getServletContext().getAttribute("logfilename");
+
             /* TODO output your page here */
             out.println("<html><head>");
             out.println("<title>Servlet Log4jInit</title>");

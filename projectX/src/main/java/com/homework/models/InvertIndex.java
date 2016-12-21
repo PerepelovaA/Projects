@@ -2,9 +2,6 @@ package com.homework.models;
 
 import java.util.*;
 
-/**
- * Created by mikhail on 13.09.16.
- */
 public class InvertIndex {
 
     private HashMap<String, String> baseBooks;

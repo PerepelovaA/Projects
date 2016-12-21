@@ -1,8 +1,5 @@
 package com.homework.models;
 
-/**
- * Created by mikhail on 13.09.16.
- */
 public class JsonPackage {
     private String action;
     private String[] docsName;

@@ -10,9 +10,6 @@ import java.util.*;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
-/**
- * Created by mikhail on 15.09.16.
- */
 class Bases {
     private static volatile Bases instance;
     private HashMap<String, String> baseBooks;

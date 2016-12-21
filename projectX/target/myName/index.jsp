@@ -18,6 +18,7 @@
 </div>
 <div class="result">
     <textarea id="result"></textarea>
+    <textarea><%= session.getAttribute("found") %></textarea>
 </div>
 
 </body>
